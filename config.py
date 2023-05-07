@@ -165,9 +165,8 @@ def load_config():
     if not os.path.exists(config_path):
         logger.info("配置文件不存在，将使用config-template.json模板")
         config_path = "./config-template.json"
-    else:
-        logger.info("opooc")
-
+    if os.path.exists(config_path):
+        logger.info("配置文件存在，将ig-template.json模板")
     config_str = read_file(config_path)
     logger.debug("[INIT] config str: {}".format(config_str))
 
