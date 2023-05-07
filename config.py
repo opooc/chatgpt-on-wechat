@@ -192,7 +192,8 @@ def load_config():
     if config.get("debug", False):
         logger.setLevel(logging.DEBUG)
         logger.debug("[INIT] set log level to DEBUG")
-
+    logger.info("[INIT] load config: {}".format(config))
+    logger.info("[INIT] load config: {}".format(config))
     logger.info("[INIT] load config: {}".format(config))
 
     config.load_user_datas()
